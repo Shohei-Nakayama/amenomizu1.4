@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あめのみづ鍼灸院</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/icon-192x192.png">
+    <script src="js/script.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+  <body>
+     <!-- ローディング画面 -->
+   <div id="loading">
+    <img class="spinner" src="images/loading.png" alt="">
+    </div>
+    <div class="title">
+      <h1>あめのみづ鍼灸院</h1>
+    </div>
+
+    <section>
+      <h2>東洋医学全般</h2>
+      <div class="img-wrap">
+        <class class="img"></class>
+      </div>
+    </section>
+    <section>
+      <h2>鍼灸治療（ささない鍼）</h2>
+      <div class="img-wrap">
+        <div class="img"></div>
+      </div>
+    </section>
+    <section>
+      <h2>漢方薬＋西洋薬のアドバイス</h2>
+      <div class="img-wrap">
+        <div class="img"></div>
+      </div>
+    </section>
+    <section>
+      <h2>温泉学</h2>
+      <div class="img-wrap">
+        <div class="img"></div>
+      </div>
+    </section>
+    <section>
+      <h2>臨床検査学</h2>
+      <div class="img-wrap">
+        <div class="img"></div>
+      </div>
+    </section>
+<br><br>
+
+<p>あめのみづ鍼灸院は<br>
+  以上の理論やメソッドを柱に<br>
+  小さな部屋の空間で<br>
+  １人１人に合った施術やアドバイスを行なっていく<br>
+  そんな鍼灸院です。</p>
+  <br><br><br>
+
+  <nav>
+    
+        <a href="/concept.html">コンセプト</a>
+        <a href="/reserve.html">予約</a>
+        <a href="/fee.html">料金</a>
+        <a href="/access.html">アクセス</a>
+        <a href="/contact.html">お問い合わせ</a><br>
+        <a href="/me.html">私について</a>
+        <a href="/writing.html">医術日誌</a>
+        <a href="https://amenomizu.webflow.io">in English</a>
+    <br>
+</nav>
+<br><br><br>
+    
+
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url("./images/IMG_0650.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: black;
+  width: 100%;
+  height: 500vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.title.active {
+  opacity: 1;
+  transition: all 3s;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.img-wrap {
+  position: relative;
+  top: 40%;
+  /* leftはapp.jsで付加される */
+  height: 40%;
+  width: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.img-wrap.active {
+  width: 40vw;
+  opacity: 1;
+  transition: opacity 1s, width 2s;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.6);
+}
+
+.img-wrap.active > .img {
+  transform: scale(1);
+  transition: 1s ease-out;
+}
+
+h2 {
+  position: absolute;
+  font-size: 2.3rem;
+  top: 70%;
+  z-index: 2;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: 0.2s;
+}
+h2.active {
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+p{
+  text-align: center;
+}
+
+nav{
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+</style>
+
+  </body>
+
+</html>
