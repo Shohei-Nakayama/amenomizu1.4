@@ -19,6 +19,18 @@
     <div class="title">
       <h1>あめのみづ鍼灸院</h1>
     </div>
+    <nav>
+    
+      <a href="/concept.html">コンセプト</a>
+      <a href="/reserve.html">予約</a>
+      <a href="/fee.html">料金</a>
+      <a href="/access.html">アクセス</a>
+      <a href="/contact.html">お問い合わせ</a><br>
+      <a href="/me.html">私について</a>
+      <a href="/writing.html">医術日誌</a>
+      <a href="https://amenomizu.webflow.io">in English</a>
+  <br>
+</nav>
 
     <section>
       <h2>東洋医学全般</h2>
@@ -33,7 +45,7 @@
       </div>
     </section>
     <section>
-      <h2>漢方薬＋西洋薬のアドバイス</h2>
+      <h2>漢方薬＋西洋薬のご提案</h2>
       <div class="img-wrap">
         <div class="img"></div>
       </div>
@@ -55,7 +67,7 @@
 <p>あめのみづ鍼灸院は<br>
   以上の理論やメソッドを柱に<br>
   小さな部屋の空間で<br>
-  １人１人に合った施術やアドバイスを行なっていく<br>
+  １人１人に合った施術やご提案を行なっていく<br>
   そんな鍼灸院です。</p>
   <br><br><br>
 
@@ -76,24 +88,25 @@
 
 
 <style>
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: rgb(255, 255, 255);
-}
+} */
 
 body {
   height: 100%;
   width: 100%;
-  background-image: url("./images/IMG_0650.jpeg");
+  background-image: url("./images/IMG_2345.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: rgb(255, 255, 255);
 }
 
-body::after {
+ body::after {
   content: "";
   position: absolute;
   display: block;
@@ -109,7 +122,7 @@ body::after {
   position: absolute;
   top: 15%;
   left: 50%;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transform: translateX(-50%);
   opacity: 0;
   z-index: 1;
@@ -131,14 +144,14 @@ section {
   position: relative;
   top: 40%;
   /* leftはapp.jsで付加される */
-  height: 40%;
+  height: 25%;
   width: 1px;
   overflow: hidden;
   opacity: 0;
 }
 
 .img-wrap.active {
-  width: 40vw;
+  width: 60vw;
   opacity: 1;
   transition: opacity 1s, width 2s;
 }
@@ -161,9 +174,10 @@ section {
 
 h2 {
   position: absolute;
-  font-size: 2.3rem;
+  font-size: 1.7rem;
+  color: rgb(82, 173, 212);
   top: 70%;
-  z-index: 2;
+  z-index: 1;
   letter-spacing: 2px;
   opacity: 0;
   transition: 0.2s;
