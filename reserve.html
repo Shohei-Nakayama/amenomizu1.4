@@ -11,7 +11,9 @@
   <script src="js/script.js" defer></script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
+
+  </head>
+
 <body>
     <!-- ローディング画面 -->
     <div id="loading">
@@ -21,11 +23,12 @@
       <!--コンテンツ -->
 
 <div class="container">
-  <a href="index.html">
-      <div class="title">あめのみづ</div>
-      <p>since 2020.04.08〜</p></a>
-   
-          
+  <header>
+     <a href="index.html">
+      <img src="images/IMG_6979.jpg" alt="sky" width="100%" height="350px"/>
+      <br><p>since 2020.04.08〜</p>
+    </a>
+        
           <nav>
               <ul>
                   <li><a href="/concept.html">コンセプト</a></li>
@@ -38,10 +41,11 @@
                   <li><a href="https://amenomizu.webflow.io">in English</a></li>
               </ul>
           </nav>
+    </header>
 
   <div id="app">
       <div class="calendar-container">
-        <h1>２０２５ -  １月</h1>
+        <h1>２０２５ -  2月</h1>
         <table class="calendar">
           <tr>
             <th>SUN</th>
@@ -53,9 +57,9 @@
             <th>SAT</th>
           </tr>
           <tr class="day">
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
             <td>1</td>
             <td>2</td>
             <td :class="{	selected:selectedDay === 3}" class="circle1" @click="selectedDate(3)">3</td>
