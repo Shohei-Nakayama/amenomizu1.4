@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QSHL2B5868"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QSHL2B5868');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>あめのみづ鍼灸院</title>
@@ -25,22 +34,22 @@
 <div class="container">
   <header>
      <a href="index.html">
-      <img src="images/IMG_6979.jpg" alt="sky" width="100%" height="350px"/>
-      <br><p>since 2020.04.08〜</p>
+      <img src="images/IMG_6979.jpg" alt="sky" width="100%" height="250px"/>
     </a>
         
           <nav>
               <ul>
                   <li><a href="/concept.html">コンセプト</a></li>
                   <li><a href="/reserve.html">予約</a></li>
-                  <li><a href="/fee.html">料金</a></li>
+                  <li><a href="/fee.html">料金</a></li><br>
                   <li><a href="/access.html">アクセス</a></li>
                   <li><a href="/contact.html">お問い合わせ</a></li>
-                  <li><a href="/me.html">私について</a></li>
+                  <li><a href="/me.html">私について</a></li><br>
                   <li><a href="/writing.html">医術日誌</a></li>
                   <li><a href="https://amenomizu.webflow.io">in English</a></li>
               </ul>
           </nav>
+          <hr>
     </header>
 
   <div id="app">
@@ -57,48 +66,48 @@
             <th>SAT</th>
           </tr>
           <tr class="day">
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
             <td>29</td>
             <td>30</td>
             <td>31</td>
-            <td>1</td>
-            <td>2</td>
-            <td :class="{	selected:selectedDay === 3}" class="circle1" @click="selectedDate(3)">3</td>
-            <td>4</td>
+            <td :class="{selected:selectedDay === 1}" class=circle1 @click="selectedDate(1)">1</td>
           </tr>
           <tr class="day">
-            <td :class="{ selected:selectedDay === 5}" class=circle2 @click="selectedDate(5)">5</td>
+            <td :class="{ selected:selectedDay === 2}" class=circle2 @click="selectedDate(2)">2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
             <td>6</td>
             <td>7</td>
-            <td :class="{ selected:selectedDay === 8}" class=circle2 @click="selectedDate(8)">8</td>
-            <td>9</td>
+            <td :class="{selected:selectedDay === 8}" class=circle1 @click="selectedDate(8)">8</td>
+          </tr>
+          <tr class="day">
+            <td :class="{ selected:selectedDay === 9}" class=circle2 @click="selectedDate(9)">9</td>
             <td>10</td>
             <td :class="{ selected:selectedDay === 11}" class=circle2 @click="selectedDate(11)">11</td>
-          </tr>
-          <tr class="day">
-            <td>12</td>
+            <td :class="{selected:selectedDay === 12}" class=circle1 @click="selectedDate(12)">12</td>
             <td>13</td>
-            <td :class="{ selected:selectedDay === 14}" class=circle2 @click="selectedDate(14)">14</td>
-            <td :class="{	selected:selectedDay === 15}" class="circle1" @click="selectedDate(15)">15</td>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
+            <td>14</td>
+            <td :class="{selected:selectedDay === 15}" class=circle1 @click="selectedDate(15)">15</td>
           </tr>
           <tr class="day">
-            <td :class="{ selected:selectedDay === 19}" class=circle2 @click="selectedDate(19)">19</td>
-            <td :class="{	selected:selectedDay === 20}" class="circle1" @click="selectedDate(20)">20</td>
+            <td :class="{ selected:selectedDay === 16}" class=circle2 @click="selectedDate(16)">16</td>
+            <td :class="{	selected:selectedDay === 17}" class="circle1" @click="selectedDate(17)">17</td>
+            <td :class="{	selected:selectedDay === 18}" class="circle1" @click="selectedDate(18)">18</td>
+            <td>19</td>
+            <td>20</td>
             <td>21</td>
-            <td :class="{ selected:selectedDay === 22}" class=circle2 @click="selectedDate(22)">22</td>
-            <td :class="{	selected:selectedDay === 23}" class="circle1" @click="selectedDate(23)">23</td>
+            <td>22</td>
+          </tr>
+          <tr class="day">
+            <td :class="{ selected:selectedDay === 23}" class=circle2 @click="selectedDate(23)">23</td>
             <td>24</td>
             <td>25</td>
-          </tr>
-          <tr class="day">
-            <td :class="{ selected:selectedDay === 26}" class=circle2 @click="selectedDate(26)">26</td>
-            <td :class="{	selected:selectedDay === 27}" class="circle1" @click="selectedDate(27)">27</td>
-            <td>28</td>
-            <td :class="{ selected:selectedDay === 29}" class=circle2 @click="selectedDate(29)">29</td>
-            <td>30</td>
-            <td :class="{ selected:selectedDay === 31}" class=circle2 @click="selectedDate(31)">31</td>
+            <td :class="{selected:selectedDay === 26}" class=circle1 @click="selectedDate(26)">26</td>
+            <td :class="{ selected:selectedDay === 27}" class=circle2 @click="selectedDate(27)">27</td>
+            <td :class="{selected:selectedDay === 28}" class=circle1 @click="selectedDate(28)">28</td>
             <td></td>
           </tr>
         </table>
@@ -241,21 +250,23 @@ Vue.createApp({
       selectedDay: null, //選択された日付
       selectedTime:'', //選択された時刻
       times:{
-        3:['8:00','10:00','12:00','14:00','16:00','18:00'],
-        15:['8:00','10:00','12:00','14:00','16:00','18:00'],
-        20:['8:00','14:00','16:00','18:00'],
-        23:['8:00','10:00','12:00','14:00','16:00','18:00'],
-        27:['8:00','10:00','12:00','14:00','16:00','18:00'],
-        5:['19:00'],
-        8:['19:00'],
-        11:['19:00'],
-        14:['19:00'],
-        19:['19:00'],
-        22:['19:00'],
+        
+        
+        2:['予約可能な時間枠はなくなりました'],
+        9:['予約可能な時間枠はなくなりました'],
+        11:['予約可能な時間枠はなくなりました'],
+        16:['12:00','14:00','16:00',],
+        23:['12:00','14:00','16:00',],
+        27:['8:00','10:00','12:00','14:00',],
+
+         1:['予約可能な時間枠はなくなりました'],
+         8:['19:00'],
+        12:['19:00'],
+        15:['19:00'],
+        17:['予約可能な時間枠はなくなりました'],
+        18:['19:00'],
         26:['19:00'],
-        29:['19:00'],
-        31:['19:00'],
-          
+        28:['19:00'],        
       },
       selectedTimes:[],
       message:'', //メッセージ
